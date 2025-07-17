@@ -17,6 +17,15 @@ position:relative;left:-221px;}';
   #phBphone,#phBname,#phBemail,#phBAddress{   
   position:relative;left:-222px;}';
 
+} elseif( $browserName ==='Brave (Webkit)' ){
+  echo '#pwlHide_1{ margin-left:177px;}';
+  echo '#mAddress{ width:140px;}';
+  echo '#mUnit{ width:41px;left:-133px;height:25px}';
+  echo '#phFname,#phLname,#phPhone,#phUname,
+  #phEmail,#phPassword,#phFull_name,
+  #phBphone,#phBname,#phBemail,#phBAddress{   
+  position:relative;left:-222px;}';
+
 } elseif( $browserName ==='Microsoft Edge' ){
   echo '#pwlHide_1{ margin-left:172px;}';
   echo '#mAddress{ width:140px;}';
