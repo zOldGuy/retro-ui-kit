@@ -1,0 +1,613 @@
+
+@font-face {
+   font-family: 'Audiowide';
+   src: url('../webfonts/Audiowide-Regular.eot');
+   src: url('../webfonts/Audiowide-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/Audiowide-Regular.woff2') format('woff2'),
+       url('../webfonts/Audiowide-Regular.woff') format('woff'),
+       url('../webfonts/Audiowide-Regular.ttf') format('ttf'),
+       url('../webfonts/Audiowide-Regular.svg#Audiowide-Regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sansa-nl';
+	src: url('../webfonts/SansationLight.eot');
+  src: url('../webfonts/SansationLight.eot?#iefix') format('embedded-opentype'),
+	url('../webfonts/SansationLight.woff') format('woff'),
+	url('../webfonts/SansationLight.ttf') format('truetype');
+	font-style:normal;
+	font-weight:normal;
+}
+
+@font-face {
+	font-family: 'Sansa-nB';
+	src: url('../webfonts/sansation_bold-webfont.eot');
+  src: url('../webfonts/sansation_bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../webfonts/sansation_bold-webfont.woff') format('woff'),
+	url('../webfonts/sansation_bold-webfont.ttf') format('truetype');
+	font-style:normal;
+	font-weight:normal;
+}
+
+
+@font-face {
+	font-family: 'Sansa-it';
+    src: url('../webfonts/sansation_light_italic-webfont.eot');
+    src: url('../webfonts/sansation_light_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/sansation_light_italic-webfont.woff2') format('woff2'),
+         url('../webfonts/sansation_light_italic-webfont.woff') format('woff'),
+         url('../webfonts/sansation_light_italic-webfont.ttf') format('truetype'),
+         url('../webfonts/sansation_light_italic-webfont.svg#sansation_lightlight_italic') format('svg');
+font-weight: normal;
+font-style: italic;
+}
+
+/* @font-face {
+	font-family: 'opSans';
+	src: url('../webfonts/OpenSansRegular.woff') format('woff'),
+	url('../webfonts/OpenSansRegular.ttf') format('truetype');
+} */
+
+
+
+ p {
+font-family: 'Sansa-nl',sans-serif;
+font-weight:normal;
+font-size: 1.2rem;
+}
+
+#vIndex {  
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.lbl_canDrag {
+	display:none;
+	color:#f5f5f5;
+	margin:-22px 0 0 5px;
+	font-family:'Sansa-nl',sans-serif;
+	font-style:italic;
+	font-size:16px;
+	position:absolute;
+}
+.lbl_canDrag::after {
+	content:"You can drag me!";
+}
+
+
+#setSW_1,#setSW_2,#setSW_3,#setSW_4,#setSW_5,#setSW_6,#setSW_7{
+float:right;
+z-index: 1020;
+margin-top: 2px;
+margin-right:22px;
+position:relative;
+background-image:url(../img/Buttons/sBtn_btn.png);
+background-position: top;
+background-repeat:no-repeat;
+width:22px;
+height:22px;
+}
+#setSW_1,#setSW_2,#setSW_3,#setSW_4,#setSW_5,#setSW_6,#setSW_7:hover{
+cursor: pointer;
+}
+
+.setSW_frm{
+	float:right;
+	z-index: 1020;
+	position:relative;
+	background-image:url(../img/Buttons/smsSwitch2.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	width:46px;
+	height:23px;	
+}
+.setSW_frm2{
+	float:right;
+	z-index: 1020;
+	position:relative;
+	background-image:url(../img/Buttons/smsSwitch3.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	width:46px;
+	height:23px;	
+}
+
+.display_none {
+display:none;
+} 
+.display_block {
+display:block;
+}
+.display_inline {
+  display:inline;
+  }
+
+#lbl_Pwl{
+    top:50px;
+    left: 50px;
+    margin-right: auto;
+    color:#fcf3cf;
+    position: absolute;
+    text-align:center;
+    font-family:'Tahoma', sans-serif;
+    font-weight: 500;
+    font-size:20px;
+    user-select: none;/* !DISABLES TEXT! */   
+}
+#lbl_Pw2{
+    top:95px;
+    margin-left:88px;
+    color: #eee;
+    position: absolute;
+    font-family:'Tahoma', sans-serif;
+    font-weight: 500;
+    font-size:16px;
+    user-select: none;/* !DISABLES TEXT! */   
+}
+#lbl_Pw3{
+    top:131px;
+    margin-left:100px;
+    color: #eee;
+    position: absolute;
+    font-family:'Tahoma', sans-serif;
+    font-weight: 500;
+    font-size:16px;
+    user-select: none;/* !DISABLES TEXT! */   
+}
+#lbl_Pw4{
+    top:131px;
+    margin-left:173px;
+    color: #eee;
+    position: absolute;
+    font-family:'Tahoma', sans-serif;
+    font-weight: 500;
+    font-size:16px;
+    user-select: none;/* !DISABLES TEXT! */   
+}
+
+#pwlGen{
+  top:175px;
+	z-index:1063!important;
+	position:absolute;
+  background-color:#5d6d7e;
+  box-shadow: 0 0 20px rgba(255,255,255,0.9);
+  border-radius:9px;
+	width:286px;
+	height:240px;
+}
+#pwlClose{
+  top:9px;
+  right:9px;
+	position:absolute;
+	background-image:url(../img/Buttons/40.png);
+	width:30px;
+	height:30px;
+}
+#pwlClose:hover{
+    cursor: pointer;
+}
+#pwlClose:active{
+    transform:scale(.85);
+}
+.pwlT2{
+    position: absolute;
+    font-family:'SansationLight', sans-serif;
+    font-size:18px;
+    user-select: none;/* !DISABLES TEXT! */
+   }
+#pwlText_1{
+    margin-top:70px;
+    margin-left:40px;   
+}
+#pwlText_2{
+    top:50px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-left:auto;
+    width:450px;   
+}
+#pWL_inner{
+	top: 20px; 
+    z-index:100; /*  Make sure we are atop other DIV */
+    height:100%;
+	  width: 100%;
+    display:flex;
+  	border-radius:8px;
+	  background-color:#fff;
+	  align-items: center;
+	  justify-content: center;
+    position:absolute;
+}
+#pwl_GenCode{
+       padding: 5px;
+        height:25px;
+        margin-top:175px;
+        margin-left:25px;
+        width:100px;
+        border-style:solid;
+        border-width: 2px;
+        border-radius: 25px;
+        line-height: 1.5;
+        font-family:'Sansa-nl', sans-serif;
+        font-weight: 600;
+        text-align:center;
+        position: absolute;
+        color: #000;
+        user-select:none;
+        border-color: #f1c40f;
+	   background-color: #f9e79f;  
+}
+#pwl_GenCode:hover{
+     cursor:pointer;                                                        
+}
+#pwl_GenCode:active{
+    transform:scale(.95);
+}
+#pwl_Send{
+       padding: 5px;
+        height:25px;
+        margin-top:175px;
+        margin-left:150px;
+        width:100px;
+        border-style:solid;
+        border-width: 2px;
+        border-radius: 25px;
+        line-height: 1.5;
+        font-family:'Sansa-nl', sans-serif;
+        font-weight: 600;
+        text-align:center;
+        position: absolute;
+        color: #000;
+        user-select:none;
+        border-color:#48c9b0;
+	   background-color:#a3e4d7; 
+}
+#pwl_Send:hover{
+    cursor:pointer;   
+}
+#pwl_Send:active{
+    transform:scale(.95);
+}
+#pwlFrm{
+    top:130px;
+    margin-left:120px;
+    position:absolute;
+     background-image:url(../img/Buttons/gryfill.png); 
+    height:23px;
+    width:40px;
+}
+#pwlBtn2{
+    top:0px;
+    left:22px;
+    position:absolute;
+    background-image:url(../img/Buttons/knob1.png); 
+    background-position:top;
+    height:24px;
+    width:22px;    
+}
+.utilCose {
+  margin-top: 5px;
+  right:5px;
+  background-image: url(../img/Buttons/40.png);
+  background-repeat: no-repeat;
+  z-index: 1062!important;
+  position:absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 30px; 
+}
+
+.blurBox {
+  position:absolute;
+  border-radius:10px;
+  border:1px solid #e9e9ed;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); 
+}
+
+.blurWnd {
+  position:absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); 
+}
+
+#bigFoot {
+  bottom:0px;
+  width:100%;
+  color:#fff;
+  height:125px;
+  font-size:16px;
+  position:fixed;
+  font-family:'Sansa-nl', sans-serif;
+  border-top:1px solid #e9e9ed;
+}
+
+#info_Wnd{
+	top:15%;
+	left:5%;
+  z-index:1;
+  color:#fff;
+	width:350px;
+  height:125px;
+  padding:10px;
+  position:absolute;
+  font-family:'Sansa-nl', sans-serif;
+  font-size:16px;
+}
+#dev,#brw,#bIn,#osS,#sTy {
+  top: 7px;
+  margin-left:100px;
+  position:relative;
+  }
+
+#regWnd {
+	top:25%;
+	left:27%;
+	width:350px;
+  height:500px;
+  z-index:1062!important;
+  position:absolute;
+  border-radius:10px;
+  border: 1px solid #8f8f9d;
+  background-color: #FBFBFB;
+  box-shadow: 0 0 15px rgba(255,255,255,0.9);
+}
+
+#res_Inner{
+  margin-top:70px;
+  position: relative;
+	width:348px;
+	height:500px;
+}
+
+#bus_Inner{
+ margin-top:95px;
+ position: absolute;
+ display: none; /* Initially Hide. some dialogs may use my sudo-class "display_none" */
+ width: 348px; 
+ height:300px;
+}
+
+#mAddress {
+  width:140px;
+  height:35px;
+  font-family:'Tahoma', sans-serif;
+  font-size:18px;
+  font-weight: 500;
+}
+
+#userTxt{ /* TEXTAREA located on Business side of registration form */
+  resize:none;
+  margin-left:5px;
+  height:140px;
+  width:334px;
+}
+
+#Bus_name,#bAddress{text-transform: uppercase;}
+#Full_name,#fname,#lname{text-transform: capitalize;}
+#bEmail,#usrEmail{text-transform: lowercase;}
+
+/* PlaceHolder Spans */
+#phFname,#phLname,#phPhone,#phUname,
+#phEmail,#phPassword,#phFull_name,
+#phBphone,#phBname,#phBemail,#phBAddress{   
+  position:relative;
+  left:-150px;
+}
+#phBComment{ /* speical case due to it's a TEXTAREA */
+  position:relative;
+  left: 8px;
+  top:-140px  
+}
+
+#phUnit{ /* speical case due to it's placement on the form! */
+  z-index:1;
+  position:relative;
+  left:-9px; 
+}
+.placeHolder{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:16px;
+	font-style:italic;
+  color:#757575;	
+} 
+#fname,#lname,#mPhone,#mEmail,#mUnit,#mUname,#mPassword,
+#Full_name,#Bus_name,#bPhone,#bEmail,#bAddress,#userTxt{
+	left:-125px;
+	top:0px;
+}
+
+.pwlLocked{
+    position:absolute;
+    background-image:url(../img/Buttons/pwl_Eye.png);
+    background-position: -32px 0px;
+    background-repeat:no-repeat;
+    transform: scale(.8);
+    width:32px;
+    height:22px;
+}
+
+.pwlUnlock{
+    position:absolute;
+    background-image:url(../img/Buttons/pwl_Eye.png);
+    background-position: 0px 0px;
+    background-repeat:no-repeat;
+    transform: scale(.8);
+    width:32px;
+    height:22px;
+}
+
+.pwlLocked,.pwlUnlock:hover{
+    cursor: pointer;
+}
+
+#meter_bck_reg{ /* Custom gradient (chart) created in Photoshop depicting password strenght */
+  left:90px;
+  z-index: 1011!important;
+	position:absolute;
+	background-image:url(../img/Buttons/score_chart.png);
+	overflow:hidden;
+  user-select: none;
+  margin-left: -20px;
+	width:206px;
+	height:17px; 
+  }
+#meter_bck_reg {
+  top:280px;
+  margin-left:-20px; 
+}
+
+#meter_pointer { /* Custom pointer-indicator for (chart) depicting password strenght */
+	top:0px;
+	left:3px;
+	position:absolute;
+  user-select: none;
+	background-image:url(../img/Buttons/score_arrow.png);
+  width:25px;
+	height:17px;  
+}
+#pwlBtn{
+  left:30px;
+  bottom: 35px;
+  position: relative;
+  background-image:url(../img/Buttons/pswBtn2.png);
+  width:34px;
+	height:34px;   
+}
+
+.edClass{
+margin-left:63px;
+flex-flow:nowrap;
+overflow: hidden;
+width: 100%;
+height:37px;
+}
+
+.hfx_editBox{
+  z-index: 1;
+  margin:7px;
+  height:25px;
+  width:200px;
+  color:#333;
+  border-radius: 4px;
+  font-family:'Verdana', sans-serif;
+  font-size:16px;
+  border: 1px solid #e9b50c; 
+  background-color: #f7ed9f;
+  outline:none;
+  }
+
+#pwlHide_1{
+  top:257px;
+  z-index:1020;
+  margin-left:52%;
+}
+
+#pwl_score_reg {
+  top:295px;
+  z-index: 1018;
+  user-select: none;
+  position:absolute;
+  right:140px;
+}
+
+#ccPost_btn,#ccClear_btn{
+	background-image:url(../img/Buttons/hfx_Btn.png);	
+	}
+
+#ccPost_btn{
+  z-index:33; 
+  margin-top:440px;
+  margin-left:62px;
+  position:absolute;
+  background-position: 0px -36px;
+  background-repeat:no-repeat;
+  width:109px;
+  height:36px;	
+  }
+  #ccClear_btn{
+  z-index:33; 
+  margin-top:440px;
+  margin-left:177px;
+  position:absolute;
+  background-position: -109px -36px;
+  background-repeat:no-repeat;
+  width:109px;
+  height:36px;	
+  }
+
+.Checked {background-position: 0px -22px;}
+.UnChecked {background-position: 0px 0px;}
+
+
+#hpx_LB70x, .hpx_LB70x {
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+position:fixed!important;
+background-color:#000000;
+opacity:0.7;
+z-index:1061!important;
+display:none;
+}
+
+#sysIcon-1{
+	left:25px;
+	bottom:35px;
+	position:absolute;
+	transform:scale(1.085);
+	background-repeat:no-repeat;
+	width:28px;
+	height:28px;
+}
+
+#webIcon-1{
+	left:25px;
+	bottom:80px;
+	position:absolute;
+	transform:scale(1.075);
+	background-repeat:no-repeat;
+	width:25px;
+	height:25px;
+}
+
+.android{background-image:url(../img/OS/system_x28.png);background-position:0px 0px;}
+.blackberry{background-image:url(../img/OS/system_x28.png);background-position:-448px 0px;}
+.iOS{background-image:url(../img/OS/system_x28.png);background-position:-28px 0px;}
+.fedora{background-image:url(../img/OS/system_x28.png);background-position:-56px 0px;}
+.linux{background-image:url(../img/OS/system_x28.png);background-position:-84px 0px;}
+.ubuntu{background-image:url(../img/OS/system_x28.png);background-position:-112px 0px;}
+.MacOS{background-image:url(../img/OS/system_x28.png);background-position:-140px 0px;}
+.win8,.win10{background-image:url(../img/OS/system_x28.png);background-position:-168px 0px;}
+.winVista{background-image:url(../img/OS/system_x28.png);background-position:-196px 0px;}
+.win2k{background-image:url(../img/OS/system_x28.png);background-position:-420px 0px;}
+.winNT{background-image:url(../img/OS/system_x28.png);background-position:-224px 0px;}
+.winXP{background-image:url(../img/OS/system_x28.png);background-position:-364px 0px;}
+.winServer{background-image:url(../img/OS/system_x28.png);background-position:-392px 0px;}
+.unknown{background-image:url(../img/OS/system_x28.png);background-position:-252px 0px;}
+.winME{background-image:url(../img/OS/system_x28.png);background-position:-308px 0px;}
+.win7{background-image:url(../img/OS/system_x28.png);background-position:-336px 0px;}
+
+.explorer_8{background-image:url(../img/OS/browser_x25.png);background-position:-225px 0px;}
+.explorer_9{background-image:url(../img/OS/browser_x25.png);background-position:-50px 0px;}
+.explorer_10{background-image:url(../img/OS/browser_x25.png);background-position:-250px 0px;}
+.explorer_11{background-image:url(../img/OS/browser_x25.png);background-position:-275px 0px;}
+.explorer_12{background-image:url(../img/OS/browser_x25.png);background-position:-275px 0px;} /* Edge Browser */
+
+.opera{background-image:url(../img/OS/browser_x25.png);background-position:-75px 0px;}
+.chrome{background-image:url(../img/OS/browser_x25.png);background-position:0px 0px;}
+.mozilla{background-image:url(../img/OS/browser_x25.png);background-position:-25px 0px;}
+.apple_safari{background-image:url(../img/OS/browser_x25.png);background-position:-100px 0px;}
+.http_unknown{background-image:url(../img/OS/browser_x25.png);background-position:-250px 0px;}
+.brave{background-image:url(../img/OS/browser_x25.png);background-position:-300px 0px;}
